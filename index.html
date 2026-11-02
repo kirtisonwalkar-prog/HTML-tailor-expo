@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tailors Expo — a gathering for tailoring, fashion, garment manufacturing and embroidery professionals in Hubli.">
+<title>Tailors Expo | Hubli</title>
+<style>
+:root{--ink:#18211d;--muted:#66716b;--cream:#f7f5ef;--green:#214c3b;--lime:#d8ef8a;--line:#e4e7df;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink)}a{color:inherit;text-decoration:none}button,input,select{font:inherit}
+.wrap{width:min(1160px,92%);margin:auto}.topbar{background:var(--green);color:#fff;font-size:13px;padding:10px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+header{background:rgba(247,245,239,.94);position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:-.04em;font-size:21px}.brandmark{width:38px;height:38px;border-radius:12px;background:var(--green);color:var(--lime);display:grid;place-items:center;font-size:20px}.navlinks{display:flex;gap:27px;align-items:center;font-size:14px;font-weight:650}.navlinks a:hover{color:#50765e}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:13px 20px;font-weight:750;cursor:pointer;transition:.2s}.btn-dark{background:var(--green);color:white}.btn-dark:hover{background:#163729;transform:translateY(-1px)}.btn-lime{background:var(--lime);color:var(--ink)}.btn-outline{border:1px solid #cbd2c8;background:transparent}
+.hero{padding:64px 0 70px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e8eddf;border-radius:99px;padding:8px 12px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}.eyebrow:before{content:"";width:7px;height:7px;background:#76a46e;border-radius:50%}h1{font-size:clamp(44px,6vw,76px);line-height:.99;letter-spacing:-.065em;margin:20px 0 22px;max-width:700px}h1 span{color:#50765e}.hero p{font-size:18px;line-height:1.65;color:var(--muted);max-width:560px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}.event-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px}.meta{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:700}.meta-icon{width:36px;height:36px;border-radius:12px;background:white;display:grid;place-items:center}
+.hero-art{position:relative;min-height:440px;border-radius:30px;background:#dce5d6;overflow:hidden;display:flex;align-items:center;justify-content:center}.hero-art:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:#c3d4b7;right:-65px;top:-80px}.hero-art:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;border:1px solid #a8bea3;left:-75px;bottom:-70px}.art-label{position:absolute;top:24px;left:24px;background:#fff;border-radius:14px;padding:12px 15px;font-size:12px;font-weight:800;z-index:2}.art-label strong{display:block;font-size:17px;margin-top:3px}.machine{position:relative;z-index:1;width:78%;max-width:430px;filter:drop-shadow(0 22px 18px #6d806b33)}.floating{position:absolute;z-index:2;background:white;border-radius:16px;padding:14px 17px;box-shadow:0 10px 30px #253d2b15;font-size:12px;font-weight:750}.floating b{display:block;font-size:18px;margin-top:3px}.float-one{right:20px;bottom:32px}.float-two{left:22px;bottom:78px}
+.strip{background:var(--green);color:white;padding:22px 0}.strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.strip strong{font-size:17px}.strip span{color:#d2dfd2;font-size:14px}
+section{padding:78px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:32px}.kicker{font-size:12px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#66816b}.section-head h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.05em;line-height:1.05;margin:10px 0 0}.section-head p{color:var(--muted);max-width:430px;line-height:1.6;margin:0}
+.audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.audience{background:white;border:1px solid var(--line);border-radius:20px;padding:24px;min-height:190px}.audience .emoji{font-size:27px}.audience h3{font-size:18px;margin:18px 0 8px}.audience p{font-size:14px;color:var(--muted);line-height:1.55;margin:0}
+.expo{background:#fff}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{border:1px solid var(--line);border-radius:20px;padding:25px}.feature .num{font-size:12px;color:#719077;font-weight:850;letter-spacing:.1em}.feature h3{margin:17px 0 10px;font-size:20px}.feature p{margin:0;color:var(--muted);line-height:1.6;font-size:14px}
+.discover-tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}.discover-tools input,.discover-tools select{padding:13px 15px;border:1px solid #d9ded6;border-radius:12px;background:white;min-width:210px;outline-color:#719077}.discover-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.stall{background:white;border:1px solid var(--line);border-radius:18px;padding:22px}.stall-tag{display:inline-block;background:#edf2e7;color:#48654e;border-radius:99px;padding:6px 10px;font-size:11px;font-weight:800}.stall h3{margin:15px 0 8px}.stall p{color:var(--muted);font-size:14px;line-height:1.55;margin:0}.empty{display:none;color:var(--muted);padding:20px}
+.register{background:#e7eddf}.register-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:start}.register h2{font-size:clamp(34px,4vw,50px);letter-spacing:-.05em;line-height:1.03;margin:14px 0}.register-copy{color:var(--muted);line-height:1.65}.detail-list{display:grid;gap:12px;margin-top:26px}.detail-list div{display:flex;gap:10px;font-weight:700;font-size:14px}.form-card{background:white;border-radius:24px;padding:28px;box-shadow:0 12px 35px #233a2910}.form-card h3{margin:0 0 8px;font-size:22px}.form-card>p{color:var(--muted);font-size:14px;margin:0 0 22px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:800}.field input,.field select{width:100%;padding:13px;border:1px solid #dfe3dc;border-radius:11px;background:#fff;outline-color:#719077}.form-card button{width:100%;margin-top:18px}.form-note{font-size:12px;color:var(--muted);margin-top:12px}.success{display:none;margin-top:14px;padding:12px;border-radius:10px;background:#e8f4e5;color:#28563b;font-size:14px;font-weight:700}
+.faq{background:#fff}.faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:45px}.faq h2{font-size:42px;letter-spacing:-.05em;margin:10px 0}.faq-item{border-bottom:1px solid var(--line);padding:18px 0}.faq-item summary{cursor:pointer;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:16px}.faq-item summary:after{content:"+";font-size:20px;color:#6d8a70}.faq-item[open] summary:after{content:"−"}.faq-item p{color:var(--muted);line-height:1.6;font-size:14px}
+footer{background:#17251d;color:white;padding:36px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer-row p{color:#c1ccc3;font-size:13px}.footer-links{display:flex;gap:18px;font-size:13px;color:#e0e8df}
+@media(max-width:850px){.hero-grid,.register-grid,.faq-grid{grid-template-columns:1fr}.hero-art{min-height:360px}.audience-grid{grid-template-columns:repeat(2,1fr)}.feature-grid,.discover-grid{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.navlinks{gap:14px}.navlinks a:not(.btn){display:none}}
+@media(max-width:560px){.hero{padding-top:40px}.hero-art{min-height:300px}.audience-grid,.feature-grid,.discover-grid,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.nav{height:66px}.navlinks .btn{padding:10px 14px;font-size:13px}.event-meta{gap:12px}.strip .wrap{align-items:flex-start;flex-direction:column}.form-card{padding:21px}section{padding:58px 0}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Hubli's gathering for the tailoring & garment industry</span><span>December 13–16 · 10:00 AM–8:00 PM</span></div></div>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><span class="brandmark">✂</span> TAILORS EXPO</a>
+<nav class="navlinks" aria-label="Main navigation"><a href="#about">About</a><a href="#showcase">Explore</a><a href="#visit">Visitor info</a><a class="btn btn-dark" href="#register">Register interest ↗</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+<div><span class="eyebrow">The craft. The machines. The community.</span>
+<h1>Where the<br><span>industry</span> comes<br>together.</h1>
+<p>Discover the latest in tailoring, fashion, embroidery and garment manufacturing at Tailors Expo — a place to connect, explore ideas and grow your business.</p>
+<div class="hero-actions"><a class="btn btn-dark" href="#register">Plan your visit ↗</a><a class="btn btn-outline" href="#showcase">Explore the expo</a></div>
+<div class="event-meta"><div class="meta"><span class="meta-icon">📅</span> December 13–16</div><div class="meta"><span class="meta-icon">📍</span> Hubli, Karnataka</div></div>
+</div>
+<div class="hero-art" aria-label="Illustration of sewing machine and tailoring tools">
+<div class="art-label">TAILORS EXPO<strong>Hubli · 4 Days</strong></div>
+<svg class="machine" viewBox="0 0 520 390" role="img" aria-label="Stylized sewing machine illustration">
+<ellipse cx="260" cy="340" rx="205" ry="23" fill="#9caf98" opacity=".45"/>
+<path d="M95 294h330v35H95z" fill="#214c3b"/><path d="M130 294V154c0-25 20-45 45-45h138c39 0 70 31 70 70v115h-62V184c0-13-10-23-23-23H190v133z" fill="#f8f6ee" stroke="#214c3b" stroke-width="12" stroke-linejoin="round"/>
+<path d="M170 115h140v55H170z" fill="#d8ef8a" stroke="#214c3b" stroke-width="10"/><rect x="194" y="180" width="145" height="27" rx="8" fill="#214c3b"/><path d="M365 184v98h-30v-98" fill="#d8ef8a" stroke="#214c3b" stroke-width="8"/>
+<path d="M338 209h-52v69h52" fill="#e6e9dc" stroke="#214c3b" stroke-width="8"/><path d="M286 278v33" stroke="#214c3b" stroke-width="7"/><path d="M275 311h23" stroke="#214c3b" stroke-width="7" stroke-linecap="round"/>
+<circle cx="202" cy="137" r="15" fill="#214c3b"/><circle cx="202" cy="137" r="5" fill="#d8ef8a"/><path d="M140 220h72v60h-72z" fill="#d8ef8a" stroke="#214c3b" stroke-width="8"/><path d="M153 235h46M153 249h46M153 263h46" stroke="#214c3b" stroke-width="5"/>
+<path d="M105 329h310" stroke="#d8ef8a" stroke-width="7" stroke-linecap="round"/>
+<path d="M395 98l12-25 12 25-12 25z" fill="#fff" stroke="#214c3b" stroke-width="5"/><path d="M407 123v48" stroke="#214c3b" stroke-width="5"/>
+</svg>
+<div class="floating float-one">MEET THE MAKERS<b>Ideas to opportunity</b></div><div class="floating float-two">4 DAYS<b>Explore · Connect · Grow</b></div>
+</div>
+</div></section>
+<div class="strip"><div class="wrap"><strong>One expo. The whole tailoring ecosystem.</strong><span>For professionals, creators, businesses and curious visitors.</span></div></div>
+<section id="about"><div class="wrap"><div class="section-head"><div><span class="kicker">Who should attend</span><h2>Made for everyone<br>in the industry.</h2></div><p>Whether you create, manufacture, sell, teach or simply love fashion, find your people and your next opportunity here.</p></div>
+<div class="audience-grid">
+<div class="audience"><div class="emoji">🧵</div><h3>Tailors & boutiques</h3><p>Discover tools, techniques and ideas to elevate your craft and business.</p></div>
+<div class="audience"><div class="emoji">👗</div><h3>Fashion designers</h3><p>Explore materials, equipment and inspiration for your next collection.</p></div>
+<div class="audience"><div class="emoji">🏭</div><h3>Garment manufacturers</h3><p>Connect with suppliers and explore solutions for production needs.</p></div>
+<div class="audience"><div class="emoji">🪡</div><h3>Embroidery professionals</h3><p>See creative possibilities, machinery and industry innovations.</p></div>
+</div></div></section>
+<section class="expo" id="showcase"><div class="wrap"><div class="section-head"><div><span class="kicker">Explore the expo</span><h2>Discover what’s<br>waiting for you.</h2></div><p>Browse showcase categories and get a feel for the businesses, products and expertise you can explore at the event.</p></div>
+<div class="feature-grid">
+<div class="feature"><span class="num">01 / MACHINERY</span><h3>Sewing & cutting</h3><p>Explore sewing machines, cutting equipment, tools and production essentials.</p></div>
+<div class="feature"><span class="num">02 / CRAFT</span><h3>Embroidery & finishing</h3><p>Discover embroidery solutions, finishing equipment and creative techniques.</p></div>
+<div class="feature"><span class="num">03 / MATERIALS</span><h3>Fabric & accessories</h3><p>Find fabrics, threads, trims, garment accessories and supporting products.</p></div>
+<div class="feature"><span class="num">04 / BUSINESS</span><h3>Dealer & supplier network</h3><p>Meet industry suppliers, compare offerings and build business connections.</p></div>
+<div class="feature"><span class="num">05 / FASHION</span><h3>Design & inspiration</h3><p>Explore trends, ideas and opportunities across the fashion ecosystem.</p></div>
+<div class="feature"><span class="num">06 / COMMUNITY</span><h3>Connect & grow</h3><p>Meet fellow professionals, exchange knowledge and discover new partnerships.</p></div>
+</div></div></section>
+<section><div class="wrap"><div class="section-head"><div><span class="kicker">Exhibitor discovery</span><h2>Find your area<br>of interest.</h2></div><p>Search categories to plan what you want to explore. Exhibitor listings can be added here as they are confirmed.</p></div>
+<div class="discover-tools"><input id="stallSearch" type="search" placeholder="Search machines, fabric, embroidery…" aria-label="Search showcase categories"><select id="stallFilter" aria-label="Filter categories"><option value="all">All categories</option><option value="Machinery">Machinery</option><option value="Craft">Craft</option><option value="Materials">Materials</option><option value="Business">Business</option><option value="Fashion">Fashion</option></select></div>
+<div class="discover-grid" id="stallGrid">
+<article class="stall" data-category="Machinery"><span class="stall-tag">Machinery</span><h3>Sewing & cutting equipment</h3><p>Machines, cutting tools and production equipment.</p></article>
+<article class="stall" data-category="Craft"><span class="stall-tag">Craft</span><h3>Embroidery & finishing</h3><p>Embroidery machinery, finishing tools and techniques.</p></article>
+<article class="stall" data-category="Materials"><span class="stall-tag">Materials</span><h3>Fabric, thread & trims</h3><p>Materials and accessories for garment creation.</p></article>
+<article class="stall" data-category="Business"><span class="stall-tag">Business</span><h3>Dealers & suppliers</h3><p>Connect with product dealers and industry suppliers.</p></article>
+<article class="stall" data-category="Fashion"><span class="stall-tag">Fashion</span><h3>Design & boutique solutions</h3><p>Ideas and products for designers and boutique owners.</p></article>
+<article class="stall" data-category="Business"><span class="stall-tag">Business</span><h3>Garment manufacturing</h3><p>Explore solutions supporting apparel production.</p></article>
+</div><p class="empty" id="emptyState">No matching categories. Try another search.</p>
+</div></section>
+<section class="register" id="register"><div class="wrap register-grid"><div><span class="kicker">Join us in Hubli</span><h2>Make time for<br>what’s next.</h2><p class="register-copy">Plan a visit to Tailors Expo and connect with the people, products and ideas shaping the tailoring and garment industry.</p>
+<div class="detail-list"><div>📅 December 13–16</div><div>🕙 10:00 AM – 8:00 PM</div><div>📍 Raiker Exhibition Ground, Hubli</div><div>🎟️ Visitor registration interest</div></div></div>
+<div class="form-card"><h3>Register your interest</h3><p>Share your details to express interest in attending.</p>
+<form id="registerForm"><div class="form-grid">
+<div class="field"><label for="name">Full name *</label><input id="name" name="name" required placeholder="Your name"></div>
+<div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" required type="tel" pattern="[0-9+\-\s]{8,15}" placeholder="Your contact number"></div>
+<div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com"></div>
+<div class="field"><label for="role">I am a *</label><select id="role" name="role" required><option value="">Select your role</option><option>Tailor</option><option>Fashion designer</option><option>Garment manufacturer</option><option>Embroidery professional</option><option>Sewing machine dealer</option><option>Student</option><option>General visitor</option><option>Other</option></select></div>
+<div class="field full"><label for="interest">What are you interested in?</label><select id="interest" name="interest"><option>General expo visit</option><option>Sewing machines & equipment</option><option>Embroidery</option><option>Fabric & accessories</option><option>Business networking</option><option>Exhibiting / stall enquiry</option></select></div>
+</div><button class="btn btn-dark" type="submit">Submit interest ↗</button><div class="form-note">Demo form: this page does not send data to a server.</div><div class="success" id="successMsg" role="status">Thank you! Your interest has been recorded in this demo.</div></form>
+</div></div></section>
+<section class="faq" id="visit"><div class="wrap faq-grid"><div><span class="kicker">Visitor information</span><h2>Good to know<br>before you go.</h2><p class="register-copy">Quick answers to help you plan your visit.</p></div><div>
+<details class="faq-item"><summary>When is Tailors Expo?</summary><p>The expo is scheduled for December 13 to 16, from 10:00 AM to 8:00 PM each day.</p></details>
+<details class="faq-item"><summary>Where is the venue?</summary><p>Raiker Exhibition Ground, Hubli, Karnataka.</p></details>
+<details class="faq-item"><summary>Who can visit?</summary><p>Tailors, fashion designers, garment manufacturers, embroidery professionals, sewing machine dealers, students and general visitors are welcome.</p></details>
+<details class="faq-item"><summary>Can I enquire about exhibiting?</summary><p>Choose “Exhibiting / stall enquiry” in the interest form. The form is a front-end demo; connect it to your event team's email or registration system to receive submissions.</p></details>
+</div></div></section>
+</main>
+<footer><div class="wrap footer-row"><div><a class="brand" href="#home"><span class="brandmark">✂</span> TAILORS EXPO</a><p>Bringing the tailoring & garment community together.</p></div><div class="footer-links"><a href="#about">About</a><a href="#showcase">Explore</a><a href="#register">Register</a></div><p>© Tailors Expo · Hubli</p></div></footer>
+<script>
+const search = document.getElementById('stallSearch');
+const filter = document.getElementById('stallFilter');
+const cards = [...document.querySelectorAll('.stall')];
+const empty = document.getElementById('emptyState');
+function filterCards(){
+ const term = search.value.trim().toLowerCase();
+ let visible = 0;
+ cards.forEach(card=>{
+  const matchesText = card.textContent.toLowerCase().includes(term);
+  const matchesCategory = filter.value === 'all' || card.dataset.category === filter.value;
+  card.style.display = matchesText && matchesCategory ? '' : 'none';
+  if(matchesText && matchesCategory) visible++;
+ });
+ empty.style.display = visible ? 'none' : 'block';
+}
+search.addEventListener('input',filterCards); filter.addEventListener('change',filterCards);
+document.getElementById('registerForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ document.getElementById('successMsg').style.display='block';
+ this.reset();
+});
+</script>
+</body>
+</html>
